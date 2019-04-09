@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+     <link href="styles/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <table style=" width:450px; background-color: #C0C0C0; list-style-type: disc;">
+        <tr style="width:500px;">
+            <td class="auto-style3">
+                <img src="Images/testingtutorresized.jpg" class="auto-style1" />
+            </td>
+           
+      
+           <td class="auto-style4">
+                <div class="nav-collapse collapse" aria-checked="undefined"><asp:Menu ID="NavigationMenu" runat="server" EnableViewState="False"
+                    IncludeStyleBlock="False"
+                    CssClass="navbar navbar-fixed-top"
+                    StaticSelectedStyle-CssClass="Active"
+                    DynanicNebyStyle-CssClass="dropdown-menu" BorderColor="#000000" BorderStyle="Dotted" OnMenuItemClick="NavigationMenu_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem Text="Home" ToolTip="Home" NavigateUrl="~/home.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Submit" ToolTip="Submit" NavigateUrl="~/Submit.aspx"></asp:MenuItem>
+                         <asp:MenuItem Text="Feedback" ToolTip="Feedback" NavigateUrl="~/feedback.aspx"></asp:MenuItem>
+                         <asp:MenuItem Text="User Activity" ToolTip="User Activity" NavigateUrl="~/UserActivity.aspx"></asp:MenuItem>
+                         <asp:MenuItem Text="Groups" ToolTip="Gruops" NavigateUrl="~/groupcreation.aspx"></asp:MenuItem>
+                         <asp:MenuItem Text="Sign Out" ToolTip="Sign Out" NavigateUrl="~/logout.html"></asp:MenuItem>
+                    </Items> 
+
+<StaticSelectedStyle CssClass="Active"></StaticSelectedStyle>
+                    </asp:Menu>
+            </td>
+         
+        </tr>
+
+        <tr style="width:500px">
+        
+         
+        </tr>
+        <tr style="width:500px;height:20px">
+            <td colspan="3">&nbsp;</td>
+        </tr>
+    </table>
+           <hr />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+             </asp:ContentPlaceHolder>
+    </form>
+
+</body>
+</html>
